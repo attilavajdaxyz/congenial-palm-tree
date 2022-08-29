@@ -114,11 +114,19 @@
           )
         }
 
+        function BackTo() {
+          return (
+            <>
+              <a href="../index.html" ><p>Back to the Main page.</p></a>
+            </>
+          )
+        }
         function MyApp() {
             return (
               <>
                 <h1>Hello, world!</h1>
                 <h2>Welcome to my app 🏞</h2>
+                <BackTo />
                 <p><a href="./about.html">This is my About page.</a></p>
                 <MyButton />
                 <MyThoughtProcess />
