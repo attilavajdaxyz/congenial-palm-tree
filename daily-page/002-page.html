@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World page #2</title>
+    <link href="002-page.css" type="text/css" rel="stylesheet" />
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Don't use this in production: -->
@@ -11,9 +12,93 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-    
+
+      function MyDescription(){
+        return (
+            <>
+                <p>This is the second page, second day, hopefully I can keep this React project blog going and realise ideas. I see images on Pinterest of graphic design and would like the create similarly cool pages. </p>
+            </>
+        )
+      }
+
+      function MyMusic(){
+        return (
+            <>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NfHPGGKR6TM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </>
+        )
+      }    
+      
+      function MyFlow(){
+        return(
+            <>
+                <p>I can keep the flow going.</p>
+            </>
+        )
+      }
+
+      function MyInspiration(){
+        return (
+            <>
+                <div className="my-inspiration-flex" >
+                    <img src="../images/pinterest-images.png" alt="images and screenshot of a pinterest page with pictures" />
+                    <p>o</p>
+                    <img src="../images/Capture d’écran 2022-08-29 à 12.22.05.png" alt="surfer poster of ocean wave for inspiration"/>
+                    <img src="../images/Capture d’écran 2022-08-29 à 12.22.20.png" alt="surfer poster of ocean wave for inspiration"/>
+                    <img src="../images/Capture d’écran 2022-08-29 à 12.22.33.png" alt="surfer poster of ocean wave for inspiration"/>
+                    <img src="../images/Capture d’écran 2022-08-29 à 12.23.01.png" alt="surfer poster of ocean wave for inspiration"/>
+                    <img src="../images/Capture d’écran 2022-08-29 à 12.23.14.png" alt="surfer poster of ocean wave for inspiration"/>
+                </div>
+            </>
+        )
+      }
+
+      function MyPalmTrees(){
+        return (
+            <>
+                <div className="flex-waves">
+                    <div className="my-poster">
+                        <h2 className="wave-title">1997</h2>
+                    </div>            
+                    <img className="basic-grid" src="../images/Capture d’écran 2022-08-29 à 13.13.31.png" alt="basic grid drawn in Figma"/>
+                </div>
+            </>
+        )
+      }
+
+      function ThoughtProcess() {
+        return (
+            <>
+                <p className="thought-text">
+                    The thought process behind this idea is that I am learning how flexbox works and why the images become flat inside that flex box elements. 😌 I am gaining inspiration from Pinterest and copy ideas.    
+                </p>
+            </>
+        ) 
+      }
+
+      function BackTo() {
+        return (
+            <>
+                <a href="../index.html" ><p>Back to the Main page.</p></a>
+            </>
+        )
+      }
+
       function MyApp() {
-        return <h1>Hello, world!</h1>;
+        return (
+            <>
+                <h1>Hello, world!</h1>
+                <BackTo />
+                <MyDescription />
+                <MyMusic />
+                <MyFlow />
+                <div className="my-flexbox">
+                    <MyInspiration />
+                    <MyPalmTrees />
+                </div>
+                <ThoughtProcess />
+            </>
+        ) 
       }
 
       const container = document.getElementById('root');
