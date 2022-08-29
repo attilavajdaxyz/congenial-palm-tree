@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Hello World page #2</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Don't use this in production: -->
@@ -12,36 +11,9 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-
-      function MyDescription() {
-        return (
-          <>
-            <p>Hello World! This is my description. This is a daily page of React page and the thoughtprocess behind it is sketchbook, building a sketchbook and continuing my design studies 😉. Poetry pages. Visioning design work. Learning the basics of design, postcard making in digital and posters.</p>
-          </>
-        )
-      }
-
-      function MyList() {
-        return (
-          <>
-            <ul>
-              <li><a href="daily-page/001-page.html">#1 page from yesterday</a>
-                <p>On this page I tried to create a card that I draw on paper. I spent 1 minute working on a project idea, then 5 minutes trying to create it in React which became an hour or so.</p>
-                <img src="images/Scan 32.jpeg" alt="initial drawing of simple card with writing" />
-              </li>
-            </ul>
-          </>
-        )
-      }
     
       function MyApp() {
-        return (
-          <>
-            <h1>Hello, world!</h1>
-            <MyDescription />
-            <MyList />
-          </>
-        )
+        return <h1>Hello, world!</h1>;
       }
 
       const container = document.getElementById('root');

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link href="./styles.css" type="text/css" rel="stylesheet" />
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="App.js"></script>
+    <script type="text/babel">
+
+
+        function MyButton() {
+            return (
+              <button>I'm a button</button>
+            );
+        }
+
+        function MyThoughtProcess () {
+            return (
+                <>
+                    <p>I am learning how to insert an object from a different file, as in using a module. My copilot trial version is running out. My client is a designer, photographer, that needs a website to explore, to imagine, to showcase, to document. It is a webpage that I build using my React learning. It would be cool to have images of surfing, climbing, practicing the feng shui of design.</p>
+                    <p>The thought process behind this is that to import this text as a module I had to make a package.json file with "type"="module", and had to research how to do it. I looked up the import and export words in devdocs. I was very happy when it finally worked. Now I wonder whether it will work with the react page as well. 🐛 I also learned how to run javascript files on the command line, which is "node name_of_file.js"</p>
+                    <p>I couldn't figure out how to import components from outside script files inside my HTML page. It feels like it is against the TAO, I will try to find a more flow way of learning, perhaps continuing with the basic React tutorial.</p>
+                </>
+            )
+        }
+
+        function AnotherThoughtProcess () {
+          return (
+            <p>GitHub copilot gave this idea for the avatar sizing. Also the idea is to have a page full of similar ideas.</p> 
+          )
+        }
+
+        function Battleship () {
+          let board = []
+          for (let i = 0; i < 5; i++) {
+            board.push([])
+            for (let j = 0; j < 5; j++) {
+              board[i].push("O")
+            }
+          }
+          return (
+            <>
+              {board.map(line => ( <p>{line.map(o => o)}</p> ))}
+            </>
+          )
+        }
+
+        function MyOtherComponent () {
+          let user = {
+            "name": "Attila"
+          }
+          return (
+            <>
+            <font color="navy">
+              <big>
+                <b>{user.name[0]}</b>
+              </big>
+            </font>  
+            {user.name.slice(1)}, the thought process behind this idea is that I looked at an old capture of Climbing magazine in the <i>Wayback</i> machine and I took a small idea, which is styling the first character of the paragraph in navy color and making it bold. I'm not sure what the font tag and the big does but nevertheless this doesn't seem to be an accessible idea as there is no p tag to mark up this paragraph. This is written inside a React component. 🏝
+            </>
+          );
+        }
+
+        function AnotherMyButton() {
+          return (
+            <button>I'm another button</button>
+          );
+        }
+
+        function MyCard() {
+          let result = []
+          const imageFlex = (num) => {
+            for (let i = 0; i < num; i++) {
+              result.push(<div className="image-div"></div>)
+            }
+          }
+          imageFlex(6)
+          return (
+            <div className="one-card">
+              {result.map(e => e)}
+            </div>
+          );
+        }
+
+        function NextCard(){
+          return (
+            <>
+              <div class="hello-world"></div>
+            </>
+          )
+        }
+
+        function MyGrid(){
+          return (
+            <>
+              <div className="wrapper">
+                <div className="one">One
+                  <a href="https://unsplash.com/photos/wHlyRW8vxg8"><img src="https://images.unsplash.com/photo-1584715625116-c1dbbfcf19be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="sea beach" /></a>
+                </div>
+                <div className="two">Two</div>
+                <div className="three">Three</div>
+                <div className="four">Four</div>
+                <div className="five">Five</div>
+                <div className="six">Six</div>
+              </div>
+            </>
+          )
+        }
+
+        function MyApp() {
+            return (
+              <>
+                <h1>Hello, world!</h1>
+                <h2>Welcome to my app 🏞</h2>
+                <p><a href="./about.html">This is my About page.</a></p>
+                <MyButton />
+                <MyThoughtProcess />
+                <a href="https://unsplash.com/photos/okVXy9tG3KY"><img className="avatar" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80" /></a>
+                <AnotherThoughtProcess />
+                <Battleship />
+                <MyOtherComponent />
+                <AnotherMyButton />
+                <MyCard />
+                <NextCard />
+                <MyGrid />
+              </>
+            )
+        }
+
+
+      const container = document.getElementById('root'); 
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+  </body>
+</html>
