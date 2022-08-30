@@ -1,0 +1,79 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+}
+
+.hello-world {
+    font-family: 'Bebas Neue', cursive;
+    color:aqua;
+}
+
+.another-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.one-painting {
+    width: 100%;
+    float: right;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 600px;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 100px;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "header header header"
+        "sidebar content-1 content-1"
+        "sidebar content-2 content-3"
+        "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+  }
+  
+  .content-1 {
+    grid-area: content-1;
+  }
+  
+  .content-2 {
+    grid-area: content-2;
+  }
+  
+  .content-3 {
+    grid-area: content-3;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+  
+  .item {
+    /* background-color: aquamarine; */
+  }
+
+  .unordered-footer {
+    display: flex;
+  }
+
+  .footer ul li {
+    list-style-type: none;
+  }
+
+  .unordered-footer img {
+    height: 50px;
+    margin: 5px;
+  }
