@@ -1,0 +1,17 @@
+#find reverse string in bash.
+# Source: https://stackoverflow.com/a/11461626 .
+var="12345"
+copy=${var}
+
+len=${#copy}
+for((i=$len-1;i>=0;i--)); do rev="$rev${copy:$i:1}"; done
+
+echo "var: $var, rev: $rev"
+
+# I can write in the comments what is going good with learning
+# I am practicing how to use Stack pilot
+# I am learning how to read code
+# I am learning how to reverse decrypt code
+# I am showing up
+# this is professional roles and goals and mental renewal 😌
+# I am learning how to run scripts in bash
