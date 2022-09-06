@@ -15,6 +15,9 @@
   }
   .header {
     grid-area: header;
+    font-family: 'Antonio', sans-serif;
+    font-size: 50px;
+    color: chocolate;
   }
   
   .sidebar {
@@ -40,7 +43,7 @@
   }
   
   .item {
-    background-color: aquamarine;
+    background-color:beige;
   }
 
   img{
